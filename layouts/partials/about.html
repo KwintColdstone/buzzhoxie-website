@@ -1,0 +1,78 @@
+{{ if .Site.Params.about.enable }}
+    {{"<!-- About Section -->" | safeHTML}}
+
+</div>
+ <section id="about" class="section about bg-gray" style="background-color:#FFCB05;">
+   <div class="socialmedia" style="background-color:#FFCB05;text-align:center;">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+       /* Style all font awesome icons(socialmedia buttons) */
+       .fa {
+         postion: absolut;
+         display: inline-block;
+         margin: auto;
+         padding: 20px;
+         font-size: 50px;
+         width: 100px;
+         text-align: center;
+         text-decoration: none;
+       }
+
+       /* Add a hover effect if you want */
+       .fa:hover {
+         color: white;
+       }
+
+       /* Set a specific color for each brand */
+
+       /* instagram */
+       .fa-instagram {
+         background: #FFCB05;
+         color: black;
+       }
+
+       /* Twitter */
+       .fa-twitter {
+         background: #FFCB05;
+         color: black;
+       }
+       /* Youtube */
+       .fa-youtube {
+         background: #FFCB05;
+         color: black;
+       }
+
+
+      </style>
+     <!-- Add font awesome icons -->
+     <a href="https://www.instagram.com/captnbuzzhoxie/" class="fa fa-instagram"></a>
+     <a href="https://twitter.com/CaptnBuzzHoxie" class="fa fa-twitter"></a>
+     <a href="https://www.youtube.com/channel/UCLurbz4W9EKZYZAzcxThztg" class="fa fa-youtube"></a>
+
+        <div class="container" style="padding-top:200px;padding-bottom:200px">
+          <p1 style="font-family:Anton;font-size:300%;color:black;">Follow Buzz Hoxie</p1>
+            <div class="row">
+                <div class="col-md-7 col-sm-12 wow fadeInLeft">
+                    <div class="content">
+
+                        <div class="sub-heading">
+                        {{ with .Site.Params.about.heading }}
+                            <h3>{{ . }}</h3>
+                        {{ end }}
+                        </div>
+                        {{ with .Site.Params.about.description }}
+                            <p>{{ . | markdownify }}</p>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+                    <div class="about-slider">
+                        {{ range .Site.Params.about.sliderItem }}
+                            <img src="{{ .image }}" alt="slider-image">
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

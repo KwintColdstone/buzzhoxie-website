@@ -1,0 +1,89 @@
+{{ if .Site.Params.service.enable }}
+    {{"<!-- Service Section -->" | safeHTML}}
+    <section id="service" class="service section" style="background-color: white">
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div id="mdb-lightbox-ui"></div>
+
+          <div class="mdb-lightbox no-margin">
+
+            <figure class="col-md-4">
+              <a href="images/photos/1.JPG" data-size="1600x1067">
+                <img alt="picture" src="images/photos/1.JPG"
+                  class="img-fluid">
+              </a>
+            </figure>
+
+
+            <figure class="col-md-4">
+              <a href="images/photos/2.JPG" data-size="1600x1067">
+                <img alt="picture" src="images/photos/2.JPG"
+                  class="img-fluid" />
+              </a>
+            </figure>
+
+              <figure class="col-md-4">
+                <a href="images/photos/3.JPG" data-size="1600x1067">
+                  <img alt="picture" src="images/photos/3.JPG"
+                    class="img-fluid">
+                </a>
+              </figure>
+
+
+              <figure class="col-md-4">
+                <a href="images/photos/4.JPG" data-size="1600x1067">
+                  <img alt="picture" src="images/photos/4.JPG"
+                    class="img-fluid" />
+                </a>
+              </figure>
+
+                <figure class="col-md-4">
+                  <a href="images/photos/5.JPG" data-size="1600x1067">
+                    <img alt="picture" src="images/photos/5.JPG"
+                      class="img-fluid">
+                  </a>
+                </figure>
+
+
+                <figure class="col-md-4">
+                  <a href="images/photos/6.JPG" data-size="1600x1067">
+                    <img alt="picture" src="images/photos/6.JPG"
+                      class="img-fluid" />
+                  </a>
+                </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+<!-- Grid row -->
+        <!--<div class="container">
+            <div class="row">
+                <div class="heading wow fadeInUp">
+                    {{ with .Site.Params.service.title }}
+                        <h2>{{ . }}</h2>
+                    {{ end }}
+                    {{ with .Site.Params.service.subtitle }}
+                        <p>{{ . }}</p>
+                    {{ end }}
+                </div>
+                {{ range .Site.Params.service.serviceItem }}
+                    <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="{{ .delay }}">
+                        <div class="block">
+                            <i class="{{ .icon }}"></i>
+                            <h3>{{ .title }}</h3>
+                            <p>{{ .description }}</p>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>-->
+    </section>
+{{ end }}
